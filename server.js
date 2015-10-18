@@ -15,12 +15,13 @@ app.use("/static", express.static("public"));
 
   // from index.ejs: <script src="/static/js/app.js"></script>
 // body parser config to accept our datatypes
-app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/', function (req, res) {
-  res.send('Yo homies!');
-})
+  //res.send('Yo homies!');
+  res.render('index');
+});
 
 
 var server = app.listen(process.env.PORT || 3000, function (){

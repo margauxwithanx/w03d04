@@ -1,0 +1,70 @@
+body {
+  background: url("http://i.imgur.com/9WiJMha.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+h1 {
+  margin-top: 40px;
+  font-family: Josefin Slab;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 80px;
+  color: #ff00cc;
+  width: 273px;
+  height: 264px;
+
+}
+
+.form-control{
+	width: 720px;
+	height: 42px;
+	margin: 0px;
+	margin-top: 50px;
+}
+
+.list-group-item{
+	width: 720px;
+	height: 42px;
+	margin-top: 10px;
+
+}
+
+.btn{
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 1px 1px 5px #888888;
+    margin-bottom: 60px;
+}
+
+.btn-xs{
+    font-weight: 300;
+}
+
+.btn-sky {
+	color: #fff;
+	background-color: #0bacd3;
+	border-bottom:2px solid #098aa9;
+}
+
+.btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open>.dropdown-toggle.btn-sky {
+	color: #fff;
+	background-color: #29b6d8;
+	border-bottom:2px solid #2192ad;
+	outline: none;
+}
+
+.btn-sky:active, .btn-sky.active {
+	color: #fff;
+	background-color: #0a97b9;
+	border-top:2px solid #087994;
+	outline-offset: none;
+	margin-top: 2px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    outline-offset: 0px;
+}
