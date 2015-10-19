@@ -5,7 +5,11 @@ var express = require("express"),
     app = express(),
     path = require("path"),
     bodyParser = require("body-parser");
+    mongoose = require("mongoose");
 
+var db = require('./models');
+
+// console.log("models running!");
 
 // CONFIG //
 // set ejs as view engine
@@ -23,7 +27,7 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-app.post('/posts/new', function(request, response){
+app.post('/api/post', function(request, response){
    console.log(request.body);
    var newPost = post.create(request.body, function(error, newPost){
      console.log(newPost);
@@ -31,6 +35,13 @@ app.post('/posts/new', function(request, response){
 
    response.json(newPost);
  });
+
+app.get('/api/post', function(req,res) {
+	Posts.find(function(err, Posts) {
+		res.send(Posts);
+	});
+});
+
 
 var server = app.listen(process.env.PORT || 3000, function (){
   console.log("listening on port 3000");

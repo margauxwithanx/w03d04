@@ -6,8 +6,6 @@ $(document).ready(function(){
 
  	var app = new MyBlog();
 
-
-
 });
 
 function MyBlog(){
@@ -28,7 +26,7 @@ function MyBlog(){
 	
 		$.ajax({
 		  method: "POST",
-		  url: "/posts/new",
+		  url: "/api/post",
 		  data: $(this).serialize(),
 		  success: console.log ("Woohoo!")
 		});
