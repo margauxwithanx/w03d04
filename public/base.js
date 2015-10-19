@@ -25,6 +25,13 @@ function MyBlog(){
 	this.$pushMeButton.on('click', function(event){
 		event.preventDefault();
 		blog.createItem(blog.$entry.val());
+	
+		$.ajax({
+		  method: "POST",
+		  url: "/posts/new",
+		  data: $(this).serialize(),
+		  success: console.log ("Woohoo!")
+		});
 	});
 
 }
@@ -40,7 +47,7 @@ MyBlog.prototype.createItem = function(text){
 
 	console.log("DEBUG: added entry: "+text);
 
-}
+};
 
 MyBlog.prototype.removeItem = function(text){
 
@@ -52,7 +59,7 @@ MyBlog.prototype.removeItem = function(text){
 		console.log("DEBUG: removed entry: "+txt);
 	}
 
-}
+};
 
 MyBlog.prototype.generateListItem = function(entry){
 
@@ -68,13 +75,13 @@ MyBlog.prototype.generateListItem = function(entry){
 		blog.removeItem(this.parentElement);
 		//use JQuery to remove list item from DOM
 		this.parentElement.remove();
-	})
-}	
+	});
+};	
 
 // debugging:
 MyBlog.prototype.printEntries = function(){
 
 	console.log(this.entries.toString());
 
-}
+};
 

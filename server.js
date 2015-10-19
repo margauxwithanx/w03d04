@@ -23,6 +23,14 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.post('/posts/new', function(request, response){
+   console.log(request.body);
+   var newPost = post.create(request.body, function(error, newPost){
+     console.log(newPost);
+   });
+
+   response.json(newPost);
+ });
 
 var server = app.listen(process.env.PORT || 3000, function (){
   console.log("listening on port 3000");
