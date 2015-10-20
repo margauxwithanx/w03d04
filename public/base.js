@@ -82,4 +82,3 @@ MyBlog.prototype.printEntries = function(){
 	console.log(this.entries.toString());
 
 };
-
